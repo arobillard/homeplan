@@ -1,4 +1,94 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+@-moz-viewport {
+  width: device-width;
+  scale: 1;
+}
+@-ms-viewport {
+  width: device-width;
+  scale: 1;
+}
+@-webkit-viewport {
+  width: device-width;
+  scale: 1;
+}
+@viewport {
+  width: device-width;
+  scale: 1;
+}
+html {
+  box-sizing: border-box;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+template {
+  display: none;
+}
+details {
+  cursor: pointer;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+a,
+area,
+button,
+input,
+label,
+select,
+textarea,
+[tabindex] {
+  touch-action: manipulation;
+}
+img {
+  border: 0;
+}
+.img-flex,
+.img-flex img {
+  display: block;
+  width: 100%;
+}
+svg {
+  fill: currentColor;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+svg.img-flex {
+  width: 100%;
+  height: 100%;
+}
 .icon {
   display: flex;
   position: relative;
@@ -26,12 +116,49 @@
 .hidden {
   display: none;
 }
+button {
+  -webkit-appearance: button;
+  -webkit-writing-mode: horizontal-tb !important;
+  color: inherit;
+  text-indent: 0px;
+  cursor: pointer;
+  background-color: inherit;
+  margin: 0;
+  font: inherit;
+  padding: 0;
+  border-width: 0;
+}
+.appbar {
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+}
 .navbar {
   position: fixed;
+  z-index: 10000;
   bottom: 0;
   left: 0;
   width: 100%;
   background-color: #fff;
+  background-image: url("../images/navbar-bg.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 360px auto;
+}
+.navbar::before,
+.navbar::after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 1px;
+  background-color: #ccc;
+}
+.navbar::before {
+  left: calc(50% + 180px);
+}
+.navbar::after {
+  right: calc(50% + 180px);
 }
 .navbar nav {
   height: 3.5rem;
@@ -42,6 +169,12 @@
 }
 .navbar nav ol {
   width: 100%;
+}
+.navbar nav a {
+  color: #999;
+}
+.navbar nav a.current {
+  color: #333;
 }
 .fab {
   position: absolute;
@@ -87,6 +220,18 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.fab.open .fab-btn-main {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.fab.open .fab-btn-options li:first-child button {
+  transform: translate(-200%, -100%);
+}
+.fab.open .fab-btn-options li:nth-child(2) button {
+  transform: translate(-50%, -200%);
+}
+.fab.open .fab-btn-options li:last-child button {
+  transform: translate(100%, -100%);
 }
 .gutter {
   padding-left: 1rem;

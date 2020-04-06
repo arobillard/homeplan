@@ -5,14 +5,15 @@ export const navbar = {
       iconClass: '',
       label: 'Profile',
       labelClass: 'hidden',
-      link: '#'
+      link: '/profile',
+      linkExact: true
     },
     home: {
       iconType: 'home',
       iconClass: '',
       label: 'Home',
       labelClass: 'hidden',
-      link: '#'
+      link: '/home'
     },
     calendar: {
       iconType: 'calendar',
@@ -20,14 +21,14 @@ export const navbar = {
       label: 'Calendar',
       labelClass: 'hidden',
       liClass: 'spread-left',
-      link: '#'
+      link: '/calendar'
     },
     settings: {
       iconType: 'settings',
       iconClass: '',
       label: 'Profile',
       labelClass: 'hidden',
-      link: '#'
+      link: '/settings'
     },
   }
 }

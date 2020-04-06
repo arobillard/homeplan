@@ -2,14 +2,17 @@ import React from 'react';
 
 class FAB extends React.Component {
 
-  fabClick = () => {
-    const fabType = this.props.fabType;
-    const fab = document.querySelector('.fab');
+  state = {
+    open: false
+  }
 
-    if (fabType === 'multi') {
-      // fab.classList.toggle('open');
-      console.log(fab);
+  fabClick = () => {
+    if (this.state.open === true) {
+      this.setState({ open: false })
+    } else {
+      this.setState({ open: true })
     }
+    
   }
 
   includeOptions = () => {
@@ -21,7 +24,21 @@ class FAB extends React.Component {
           <li>
             <button className="fab-btn fab-btn-secondary">
               <i className="icon">
-                <svg><use xlinkHref={`images/icons.svg#${this.props.iconType}`} /></svg>
+                <svg><use xlinkHref={`/images/icons.svg#${this.props.iconType}`} /></svg>
+              </i>
+            </button>
+          </li>
+          <li>
+            <button className="fab-btn fab-btn-secondary">
+              <i className="icon">
+                <svg><use xlinkHref={`/images/icons.svg#${this.props.iconType}`} /></svg>
+              </i>
+            </button>
+          </li>
+          <li>
+            <button className="fab-btn fab-btn-secondary">
+              <i className="icon">
+                <svg><use xlinkHref={`/images/icons.svg#${this.props.iconType}`} /></svg>
               </i>
             </button>
           </li>
@@ -32,10 +49,10 @@ class FAB extends React.Component {
 
   render() {
     return (
-      <div className="fab">
-        <button className="fab-btn fab-btn-main" onClick={this.fabClick()}>
+      <div className={`fab${this.state.open ? ' open' : ''}`}>
+        <button className="fab-btn fab-btn-main" onClick={this.fabClick}>
           <i className="icon">
-            <svg><use xlinkHref={`images/icons.svg#${this.props.iconType}`} /></svg>
+            <svg><use xlinkHref={`/images/icons.svg#${this.props.iconType}`} /></svg>
           </i>
         </button>
         {this.includeOptions()}

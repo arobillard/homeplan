@@ -1,9 +1,25 @@
 .navbar
   position fixed
+  z-index 10000
   bottom 0
   left 0
   width 100%
   background-color #fff
+  background-image url(../images/navbar-bg.svg)
+  background-position top center
+  background-repeat no-repeat
+  background-size 360px auto
+  &::before, &::after
+    content ' '
+    position absolute
+    top 0
+    width: 100vw
+    height 1px
+    background-color #ccc
+  &::before
+    left calc(50% + 180px)
+  &::after
+    right calc(50% + 180px)
   nav
     height 3.5rem
     display flex
@@ -12,6 +28,10 @@
     margin 0 auto
     ol
       width 100%
+    a
+      color #999
+      &.current
+        color #333
 
 .fab
   position absolute
@@ -50,3 +70,12 @@
     top 50%
     left 50%
     transform translate(-50%, -50%)
+  &.open
+    .fab-btn-main
+      transform translate(-50%, -50%) rotate(45deg)
+    .fab-btn-options li:first-child button
+      transform: translate(-200%, -100%)
+    .fab-btn-options li:nth-child(2) button
+      transform: translate(-50%, -200%)
+    .fab-btn-options li:last-child button
+      transform: translate(100%, -100%)

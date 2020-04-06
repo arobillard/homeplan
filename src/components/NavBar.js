@@ -1,8 +1,7 @@
 import React from 'react';
-import Icon from './Icon';
+import NavBarIcon from './NavBarIcon';
 import {navbar} from '../app-settings';
 import FAB from './FAB';
-
 
 class NavBar extends React.Component {
 
@@ -17,7 +16,7 @@ class NavBar extends React.Component {
           <ol className="list-group-flex gutter">
               {Object.keys(navbar.icons).map(key => (
                 <li key={key} className={`gutter-1-4 ${navbar.icons[key].liClass}`}>
-                  <Icon
+                  <NavBarIcon
                     iconData={navbar.icons[key]}
                   />
                 </li>
