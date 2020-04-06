@@ -1,0 +1,52 @@
+.navbar
+  position fixed
+  bottom 0
+  left 0
+  width 100%
+  background-color #fff
+  nav
+    height 3.5rem
+    display flex
+    align-items center
+    max-width 22.5em
+    margin 0 auto
+    ol
+      width 100%
+
+.fab
+  position absolute
+  left 50%
+  top 0
+  transform translate(-50%, -73.21428571%)
+  width 3.5rem
+  height 3.5rem
+  .fab-btn
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+    border-radius 50%
+    background-color #666
+    box-shadow 0 6px 6px rgba(0, 0, 0, .25)
+    display flex
+    align-items center
+    justify-content center
+    transition transform .25s
+    border 0
+    svg
+      fill #fff
+    &:active
+      transform translate(-50%, -50%) scale(.9)
+  .fab-btn-main
+    width 3.5rem
+    height 3.5rem
+    z-index: 10
+  .fab-btn-secondary
+    width 2.5rem
+    height 2.5rem
+    z-index: 5
+  .fab-btn-options, .fab-btn-options li
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
