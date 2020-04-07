@@ -43,5 +43,35 @@ export const data = {
       itemName: "Playstation 4",
       owner: "robillard-adam"
     }
+  },
+  calendar: {
+    1586538000: {
+      time: 1586538000,
+      title: "Andrew's Birthday Party",
+      desc: "A fun and exciting birthday party",
+      roomId: "den"
+    },
+    1589130000: {
+      time: 1589130000,
+      title: "Hannah's Birthday Party",
+      desc: "A fun and exciting birthday party",
+      roomId: "den"
+    }
+  },
+  tasks: {
+    dishes: {
+      name: "Dishes",
+      roomId: "kitchen",
+      desc: "Do all of the dishes.",
+      time: 1586372400,
+      assigned: "robillard-adam"
+    },
+    garbage: {
+      name: "Garbage",
+      roomId: "kitchen",
+      desc: "Take out the garbage.",
+      time: 1586505600,
+      assigned: "robillard-hugh"
+    }
   }
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 
 
 class SignIn extends React.Component {
@@ -7,8 +6,14 @@ class SignIn extends React.Component {
   render() {
     return (
       <>
-      <h1>HomePlan</h1>
-      <NavLink to="/profile">Sign In</NavLink>
+      <h1>Welcome to HomePlan</h1>
+      <button
+        className="btn-sign-in-facebook"
+        onClick={this.props.authenticate}
+      >
+        Sign In with Facebook
+      </button>
+        <button onClick={this.props.loadData}>Load Data</button>
       </>
     )
   }

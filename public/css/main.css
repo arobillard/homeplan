@@ -89,7 +89,8 @@ svg.img-flex {
   width: 100%;
   height: 100%;
 }
-.icon {
+.icon,
+.icon-more-menu {
   display: flex;
   position: relative;
   background: transparent none no-repeat center center;
@@ -101,14 +102,23 @@ svg.img-flex {
   justify-content: center;
 }
 .icon svg,
-.icon img {
+.icon-more-menu svg,
+.icon img,
+.icon-more-menu img {
   width: 100%;
   height: 100%;
+}
+.icon-more-menu {
+  width: 12px;
 }
 .list-group,
 .list-group-flex {
   padding: 0;
   list-style-type: none;
+}
+.list-group li,
+.list-group-flex li {
+  display: block;
 }
 .list-group-flex {
   display: flex;
@@ -128,8 +138,15 @@ button {
   padding: 0;
   border-width: 0;
 }
+button:focus {
+  outline: none;
+}
 .appbar {
   height: 3.5rem;
+  display: flex;
+  align-items: center;
+}
+.appbar .list-group-flex li {
   display: flex;
   align-items: center;
 }
@@ -204,6 +221,9 @@ button {
 .fab .fab-btn:active {
   transform: translate(-50%, -50%) scale(0.9);
 }
+.fab .fab-btn .icon {
+  transition: transform 0.25s;
+}
 .fab .fab-btn-main {
   width: 3.5rem;
   height: 3.5rem;
@@ -221,8 +241,8 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.fab.open .fab-btn-main {
-  transform: translate(-50%, -50%) rotate(45deg);
+.fab.open .fab-btn-main .icon {
+  transform: rotate(45deg);
 }
 .fab.open .fab-btn-options li:first-child button {
   transform: translate(-200%, -100%);
@@ -237,11 +257,11 @@ button {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.gutter-1-4 {
+.gutter-1-1-4 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
-.gutter-1-2 {
+.gutter-1-1-2 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
@@ -249,8 +269,95 @@ button {
   padding-left: 2rem;
   padding-right: 2rem;
 }
+.push-l {
+  padding-left: 1rem;
+}
+.push-l-1-1-4 {
+  padding-left: 1.25rem;
+}
+.push-l-1-1-2 {
+  padding-left: 1.5rem;
+}
+.push-l-2 {
+  padding-left: 2rem;
+}
+.push-r {
+  padding-right: 1rem;
+}
+.push-r-1-1-4 {
+  padding-right: 1.25rem;
+}
+.push-r-1-1-2 {
+  padding-right: 1.5rem;
+}
+.push-r-2 {
+  padding-right: 2rem;
+}
 .spread-left {
   margin-left: auto;
+}
+.page-content {
+  padding-bottom: 7rem;
+}
+.w-1 {
+  width: 100%;
+}
+.w-1-2 {
+  width: 50%;
+}
+.w-1-3 {
+  width: 33.3333%;
+}
+.w-2-3 {
+  width: 66.6666%;
+}
+.w-1-4 {
+  width: 25%;
+}
+.w-3-4 {
+  width: 75%;
+}
+.w-1-5 {
+  width: 20%;
+}
+.w-2-5 {
+  width: 40%;
+}
+.w-3-5 {
+  width: 60%;
+}
+.w-4-5 {
+  width: 80%;
+}
+.h-1 {
+  height: 100%;
+}
+.h-1-2 {
+  height: 50%;
+}
+.h-1-3 {
+  height: 33.3333%;
+}
+.h-2-3 {
+  height: 66.6666%;
+}
+.h-1-4 {
+  height: 25%;
+}
+.h-3-4 {
+  height: 75%;
+}
+.h-1-5 {
+  height: 20%;
+}
+.h-2-5 {
+  height: 40%;
+}
+.h-3-5 {
+  height: 60%;
+}
+.h-4-5 {
+  height: 80%;
 }
 h1,
 h2,

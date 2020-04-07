@@ -104,12 +104,16 @@ svg.img-flex {
   svg, img
     width 100%
     height 100%
-
+.icon-more-menu
+  @extends .icon
+  width 12px
 // Lists
 
 .list-group, .list-group-flex
   padding 0
   list-style-type none
+  li
+    display block
 
 .list-group-flex
   display flex
@@ -122,13 +126,15 @@ svg.img-flex {
 // Buttons
 
 button
-    -webkit-appearance: button;
-    -webkit-writing-mode: horizontal-tb !important;
-    color: inherit;
-    text-indent: 0px;
-    cursor: pointer;
-    background-color: inherit;
-    margin: 0;
-    font: inherit;
-    padding: 0
-    border-width: 0;
+  -webkit-appearance: button;
+  -webkit-writing-mode: horizontal-tb !important;
+  color: inherit;
+  text-indent: 0px;
+  cursor: pointer;
+  background-color: inherit;
+  margin: 0;
+  font: inherit;
+  padding: 0
+  border-width: 0;
+  &:focus
+    outline none

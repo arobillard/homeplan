@@ -5,17 +5,13 @@ import FAB from './FAB';
 
 class NavBar extends React.Component {
 
-  componentDidMount() {
-    console.log(navbar);
-  }
-
   render() {
     return (
       <header className="navbar" role="banner">
         <nav role="navigation">
           <ol className="list-group-flex gutter">
               {Object.keys(navbar.icons).map(key => (
-                <li key={key} className={`gutter-1-4 ${navbar.icons[key].liClass}`}>
+                <li key={key} className={`gutter-1-1-4 ${navbar.icons[key].liClass}`}>
                   <NavBarIcon
                     iconData={navbar.icons[key]}
                   />

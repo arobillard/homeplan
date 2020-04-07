@@ -57,6 +57,8 @@
       fill #fff
     &:active
       transform translate(-50%, -50%) scale(.9)
+    .icon
+      transition transform .25s
   .fab-btn-main
     width 3.5rem
     height 3.5rem
@@ -71,8 +73,8 @@
     left 50%
     transform translate(-50%, -50%)
   &.open
-    .fab-btn-main
-      transform translate(-50%, -50%) rotate(45deg)
+    .fab-btn-main .icon
+      transform rotate(45deg)
     .fab-btn-options li:first-child button
       transform: translate(-200%, -100%)
     .fab-btn-options li:nth-child(2) button
