@@ -91,50 +91,74 @@ svg.img-flex {
   height: 100%;
 }
 
-.icon
-  display flex
-  position relative
-  background transparent none no-repeat center center
-  background-size contain
-  vertical-align middle
-  width 24px
-  height 24px
-  align-items center
-  justify-content center
-  svg, img
-    width 100%
-    height 100%
-.icon-more-menu
-  @extends .icon
-  width 12px
+.icon  {
+  display: flex;
+  position: relative;
+  background: transparent none no-repeat center center;
+  background-size: contain;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  svg, img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.icon-more-menu {
+  @extend .icon;
+  width: 12px;
+}
 // Lists
 
-.list-group, .list-group-flex
-  padding 0
-  list-style-type none
-  li
-    display block
+.list-group, .list-group-flex {
+  padding: 0;
+  list-style-type: none;
+  li {
+    display: block;
+  }
+}
 
-.list-group-flex
-  display flex
+.list-group-flex {
+  display: flex;
+}
+
+.mdc-list {
+  padding: .5rem;
+  > li, > a, > button {
+    display: flex;
+    padding: .5rem;
+    &:not(:last-child) {
+      margin-bottom: .5rem;
+    }
+    i {
+      margin-right: 2rem;
+    }
+  }
+}
 
 // Show Hide
 
-.hidden
-  display none
+.hidden {
+  display: none;
+}
 
 // Buttons
 
-button
+button {
   -webkit-appearance: button;
   -webkit-writing-mode: horizontal-tb !important;
+  writing-mode: horizontal-tb !important;
   color: inherit;
   text-indent: 0px;
   cursor: pointer;
   background-color: inherit;
   margin: 0;
   font: inherit;
-  padding: 0
+  padding: 0;
   border-width: 0;
-  &:focus
-    outline none
+  &:focus {
+    outline: none;
+  }
+}

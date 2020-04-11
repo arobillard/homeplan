@@ -1,0 +1,16 @@
+.item-grid {
+  display: flex;
+  flex-wrap: wrap;
+  &-unit {
+    text-align: center;
+    width: calc(50% - .5rem);
+    &:nth-child(odd) {
+      margin-right: 1rem;
+    }
+    &-img {
+      @include imgCircle();
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+}

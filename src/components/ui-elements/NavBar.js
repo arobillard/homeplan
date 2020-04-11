@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBarIcon from './NavBarIcon';
-import {navbar} from '../app-settings';
+import {navbar} from '../../app-settings';
 import FAB from './FAB';
 
 class NavBar extends React.Component {
@@ -11,7 +11,7 @@ class NavBar extends React.Component {
         <nav role="navigation">
           <ol className="list-group-flex gutter">
               {Object.keys(navbar.icons).map(key => (
-                <li key={key} className={`gutter-1-1-4 ${navbar.icons[key].liClass}`}>
+                <li key={key} index={key} className={`gutter-1-1-4 ${navbar.icons[key].liClass}`}>
                   <NavBarIcon
                     iconData={navbar.icons[key]}
                   />
@@ -20,8 +20,13 @@ class NavBar extends React.Component {
           </ol>
         </nav>
         <FAB
-          iconType='plus'
+          iconType='add'
           fabType='multi'
+          subIcons={{
+            today: "today",
+            assignment: 'assignment',
+            schedule: 'schedule'
+          }}
         />
       </header>
     )

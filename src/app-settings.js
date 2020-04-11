@@ -1,11 +1,11 @@
 export const navbar = {
   icons: {
     profile: {
-      iconType: 'profile',
+      iconType: 'perm_identity',
       iconClass: '',
       label: 'Profile',
       labelClass: 'hidden',
-      link: '/profile',
+      link: '/app/profile',
       linkExact: true
     },
     home: {
@@ -13,22 +13,22 @@ export const navbar = {
       iconClass: '',
       label: 'Home',
       labelClass: 'hidden',
-      link: '/home'
+      link: '/app/home'
     },
     calendar: {
-      iconType: 'calendar',
+      iconType: 'today',
       iconClass: '',
       label: 'Calendar',
       labelClass: 'hidden',
       liClass: 'spread-left',
-      link: '/calendar'
+      link: '/app/calendar'
     },
     settings: {
       iconType: 'settings',
       iconClass: '',
       label: 'Profile',
       labelClass: 'hidden',
-      link: '/settings'
+      link: '/app/settings'
     },
   }
 }

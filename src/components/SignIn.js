@@ -1,19 +1,14 @@
 import React from 'react';
-
+import { Redirect } from 'react-router-dom';
 
 class SignIn extends React.Component {
 
   render() {
     return (
       <>
-      <h1>Welcome to HomePlan</h1>
-      <button
-        className="btn-sign-in-facebook"
-        onClick={this.props.authenticate}
-      >
-        Sign In with Facebook
-      </button>
-        <button onClick={this.props.loadData}>Load Data</button>
+      <h1>Sign In</h1>
+      <Redirect to="/app" />
+      {/* <Link to="/app">Sign In</Link> */}
       </>
     )
   }
